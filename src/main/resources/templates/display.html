@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		
+		<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" th:href="@{css/linearicons.css}">
+			<link rel="stylesheet" th:href="@{css/font-awesome.min.css}">
+			<link rel="stylesheet" th:href="@{css/bootstrap.css}">
+			<link rel="stylesheet" th:href="@{css/magnific-popup.css}">
+			<link rel="stylesheet" th:href="@{css/jquery-ui.css}">				
+			<link rel="stylesheet" th:href="@{css/nice-select.css}">							
+			<link rel="stylesheet" th:href="@{css/animate.min.css}">
+			<link rel="stylesheet" th:href="@{css/owl.carousel.css}">				
+			<link rel="stylesheet" th:href="@{css/main.css}">
+</head>
+<body>
+
+		
+		<form action="/book" method="post">
+		<div class="container text-center">
+		<div>
+		<h1>List of All Flights Available</h1>
+		</div>
+		<div>
+		<h1 style="background-color: white;color: cyan">Please Remember The Reservation Number For Login</h1>
+		</div>
+		<div>
+		<table class="table table-striped table-bordered">
+		<thead class="thead-dark">
+		<tr>
+		<th>DEPARTURE</th>
+		<th>DURATION</th>
+		<th>ARRIVAL</th>
+		<th>Source</th>
+		<th>Destination</th>
+		<th>Reservation-Id</th>
+		
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="user: ${mum}"> 
+		<td th:text="${user.dep}">DEPARTURE</td>
+		<td th:text="${user.dur}">DURATION</td>
+		<td th:text="${user.arr}">ARRIVAL</td>
+		<td th:text="${user.source}">source</td>
+		<td th:text="${user.destination}">destination</td>
+		<td th:text="${user.id}">Reservation-Id</td>
+		<td><input type="submit" value="Book Now"></td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		</form>
+		
+		<!-- <h1 style="color: white;" th:text="${session.from}"></h1><h1 style="color: white;">to</h1><h1 style="color: white;"  th:text="${session.to}"></h1><h1 style="color: white;">available Flights</h1>
+		<table style="background-color: cyan;" border="1">
+		<tr>
+		<h5 style="color: white;">
+		<th>DEPARTURE | DURATION | ARRIVAL</th></h5></tr>
+		<tr th:each="data : ${session.al}"> 
+		<td><h1 th:text="${data}"></td>
+		</tr>
+		<td>5000</td>
+		<td><input type="submit" value="Book Now"></td>
+		
+		</table></center></form>
+		<tr th:each="user: ${user}">  
+<td th:text="${user.name}">name</td>
+<td th:text="${user.email}">email</td>
+</tr>
+		 -->
+		
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+body {
+	background-image: url("../img/airhoster.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+				<div class="book">
+				<center>
+				<form action="/gateway" method="post">
+				<h1 style="color: red;">Payment Gateway</h1>
+				Card Type<select name="ctype" required="required">
+				<option value="Visa">Visa</option>
+				<option value="Master">Master</option>
+				<option value="Amex">Visa</option>
+				</select><br><br>
+				Card Number<input type="number" name="cardno" required="required" placeholder="Enter your card number here"><br><br>
+				User Name<input type="email" name="uname" placeholder="Enter your mail-id here" required="required"><br><br>
+				Password<input type="password" name="pass" placeholder="Enter Password here" required="required"><br><br>
+				<input type="submit" value="make payment" style="background-color: blue;color: white;font-size: 20px;border-radius: 10px /20px;">
+				<input type="reset" value="clear" style="background-color: blue;color: white;font-size: 20px;border-radius: 10px /20px;">
+				</form></center>
+				</div>
+</body>
+</html>

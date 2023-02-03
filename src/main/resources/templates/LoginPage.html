@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" th:href="@{/css/f.css}"/>
+</head>
+<body>
+				<center>
+				<h1>welcome to airprice.co.in</h1>
+				<button onclick="window.print()" style="font-size: 15px;background-color: white;color: blue;">Print Ticket</button>
+				<div class="login">
+				<h2>AIR TICKET</h2>
+				<p th:text="${session.source}" style="font-size: 30px;background-color: white;color: red;"></p>
+				<img src="" th:src="@{/img/airplane.png}" style="width:20%;"/>
+				<p th:text="${session.des}" style="font-size: 30px;background-color: white;color: red;"></p>
+				<table>
+				<tr>
+				<td>PASSENGER Details:</td></tr>
+				<tr>
+				<td>Fullname:<th th:text="${session.fullname}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>Email-id:<th th:text="${session.eml}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>Address:<th th:text="${session.address}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>Adults:<th th:text="${session.adults}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>childrens:<th th:text="${session.childrens}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>classes:<th th:text="${session.classes}" style="font-size: 20px;"></th></td></tr>
+				<tr><td>flightType:<th th:text="${session.flightType}" style="font-size: 20px;"></th></td></tr>
+				
+				
+				<tr><td style="background-color: red;">Deprature</td><th th:text="${session.dep}" style="font-size: 20px;"></th></tr>
+				<tr><td style="background-color: red;">Duration</td><th th:text="${session.dur}" style="font-size: 20px;"></th></tr>
+				<tr><td style="background-color: red;">Arrival</td><th th:text="${session.arr}" style="font-size: 20px;"></th></tr>
+				<tr><td>Reservation No.:<th th:text="${session.id1}" style="font-size: 20px;"></th></td></tr>
+				
+				
+				
+				
+				<!-- <tbody>
+				<tr th:each="user: ${mum}"> 
+				<td th:text="${user.dep}"></td>
+				<td th:text="${user.dur}"></td>
+				<td th:text="${user.arr}"></td>
+				<td th:text="${user.id}"></td>
+				</tr>
+				</tbody>
+				<tr> -->
+				<td>GATE</td>
+				<th style="font-size: 20px;">23A</th>
+				</tr>
+				<tr>
+				<td>DATE</td>
+				<th th:text="${session.date}" style="font-size: 20px;"></th>
+				</tr>
+				</table>
+				</div>
+				</center>
+				
+</body>
+</html>
